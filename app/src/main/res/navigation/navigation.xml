@@ -15,4 +15,8 @@
         android:name="com.example.assignment.Donation"
         android:label="fragment_donation"
         tools:layout="@layout/fragment_donation" />
+    <fragment
+        android:id="@+id/volunteer"
+        android:name="com.example.assignment.Volunteer"
+        android:label="Volunteer" />
 </navigation>

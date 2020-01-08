@@ -16,6 +16,7 @@ import kotlinx.android.synthetic.main.activity_content.*
 class Content : AppCompatActivity() {
     lateinit var donationFragment: Donation
     lateinit var foodFragment:Food
+    lateinit var volunteerFragment:Volunteer
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_content)
@@ -42,6 +43,11 @@ class Content : AppCompatActivity() {
                 R.id.navigation_food ->{
                     foodFragment = Food()
                     supportFragmentManager.beginTransaction().replace(R.id.framelayout,foodFragment)
+                        .commit()
+                }
+                R.id.navigation_team ->{
+                    volunteerFragment = Volunteer()
+                    supportFragmentManager.beginTransaction().replace(R.id.framelayout,volunteerFragment)
                         .commit()
                 }
             }
